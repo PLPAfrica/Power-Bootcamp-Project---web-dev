@@ -5,16 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="./index.js" defer type="module"></script>
     <title>Power BootCamp Task Management</title>
 </head>
 
 <body>
-    <h1>Hello world</h1>
-    <h1>dsfjhj</h1>
-    <h2>Dedan Okware </h2>
-    <form>
-        <label>Name</label>label></label>
-    </form>form></form>
+    <div class="login-container">
+        <div id="main">
+            <h1>Sign In</h1>
+            <input id="email" type="text" placeholder="Email"></input>
+            <input id="password" type="password" placeholder="Password"></input>
+            <button id="submit">Login</button>
+            <p><span>or</span></p>
+            <button id="sign-up">Sign Up</button>
+        </div>
+
+        <div id="create-acct">
+            <h1>Create an Account</h1>
+            <input id="email-signup" type="text" placeholder="Email *"></input>
+            <input id="confirm-email-signup" type="email" placeholder="Confirm Email *"></input>
+            <input id="password-signup" type="password" placeholder="Password *"></input>
+            <input id="confirm-password-signup" type="password" placeholder="Confirm Password *"></input>
+            <button id="create-acct-btn">Create Account</button>
+            <button id="return-btn">Return to Login</button>
+        </div>
+    </div>
+
 
 </body>
 
