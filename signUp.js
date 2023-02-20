@@ -19,7 +19,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+// const database = getDatabase(app);
 const auth = getAuth();
 
 const submitButton = document.getElementById("submit");
@@ -77,7 +77,7 @@ createacctbtn.addEventListener("click", function () {
     createUserWithEmailAndPassword(auth, signupEmail, signupPassword)
       .then((userCredential) => {
         // Signed in
-        const user = userCredential.user;
+        // const user = userCredential.user;
         // ...
         window.alert("Success! Account created.");
         window.location = "./createTask.html";
@@ -94,9 +94,9 @@ createacctbtn.addEventListener("click", function () {
 
 submitButton.addEventListener("click", function () {
   email = emailInput.value;
-  console.log(email);
+  // console.log(email);
   password = passwordInput.value;
-  console.log(password);
+  // console.log(password);
 
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
@@ -109,8 +109,8 @@ submitButton.addEventListener("click", function () {
       // ...
     })
     .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
+      // const errorCode = error.code;
+      // const errorMessage = error.message;
       window.alert("Error occurred. Try again.");
     });
 });
