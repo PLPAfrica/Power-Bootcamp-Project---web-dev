@@ -47,7 +47,7 @@ function storeTask(event) {
           </div>
           <hr>
           <div class="buttons">
-            <button class=" button edit" id="editData" >EDIT TASK</button>
+            <button class=" button edit" id="editData" onclick = "editData('${code}')" >EDIT TASK</button>
             <button class=" button delete" id="deleteData" onclick="deleteData('${code}')"  >DELETE TASK</button>
           </div>
         </div>
@@ -68,4 +68,26 @@ function deleteData(code) {
     .update({
       totalItems: totalItems - 1,
     });
+}
+
+// Edit Task
+
+function editData(c) {
+  document.getElementById("task").value = document
+    .getElementById(c)
+    .querySelector(".data")
+    .querySelector(".Task").innerHTML;
+
+  document.getElementById("desc").value = document
+    .getElementById(c)
+    .querySelector(".data")
+    .querySelector(".desc").innerHTML;
+
+  if (document.getElementById("addTask") !== null) {
+    document.getElementById("addTask").remove();
+  }
+  document.getElementById("form-btns").innerHTML = `
+    <button class="button update" id = "updateTask" onclick = "updateData('${c}')">󠀫󠀫<i class="fas fa-sync-alt"></i> UPDATE TASK</button>
+    <button class="button cancel" id = "cancelTask" onclick = "cancelUpdation()"><i class="fas fa-ban"></i> CANCEL</button>
+    `;
 }
