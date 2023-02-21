@@ -1,0 +1,422 @@
+:root{
+    --primary-color : #01a2a8;
+    --primary-dark : #AB1449;
+    --gray : #aaaaaa;
+    --border : rgb(207, 207, 207);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    transition: all 0.2s ease-in-out;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+    box-sizing : border-box;
+    margin :0;
+    background-color: rgb(231, 231, 231);
+    scroll-behavior: smooth;
+}
+
+/* Styles for header */
+.main-heading{
+    background-color: var(--primary-color);
+    margin : 0;
+    border-bottom-left-radius: 1rem;
+    padding : 40px;
+    color : white;
+    text-shadow: 2px 2px rgb(46, 46, 46);
+}
+.head{
+    background-color : white;
+}
+
+
+
+.center{
+    text-align: center;
+}
+
+.field{
+    padding : 13px;
+    font-size : 17px;
+    border-radius: 0.3rem;
+    border : 1px solid black;
+    display: block;
+    margin : 10px auto;
+    width : 75%;
+    box-sizing : border-box;
+}
+
+.left-div{
+    width : 49%;
+    margin : 0;
+    padding : 0;
+    display : inline-block;
+    margin : auto;
+    vertical-align: top;
+    /* background-color: white; */
+}
+.right-div{
+    width : 49%;
+    margin : 0;
+    padding : 0;
+    display : inline-block;
+    margin : auto;
+    padding : 30px;
+    color : gray;
+    box-sizing: border-box;
+}
+.left-div .form{
+    width : 90%;
+    border : 2px solid var(--border);
+    box-shadow: var(--border) 1.95px 1.95px 2.6px;
+    padding : 3rem 2rem;
+    box-sizing: border-box;
+    margin : 30px auto;
+    background-color: white;
+}
+.left-div .label{
+    display : block;
+    width : 100%;
+    color : var(--gray);
+    font-size: 28px;
+    font-family: 'Oswald', sans-serif;
+    font-stretch: semi-condensed;
+}
+.left-div .form .task-div, .left-div .form .desc-div{
+    margin-bottom : 40px;
+}
+
+::placeholder{
+    color : var(--gray); 
+    font-size : 16px;
+}
+.left-div .input-field{
+    display : block;
+    width : 100%;
+    border : none;
+    border-bottom: 2px solid var(--gray);
+    padding : 11px 2px;
+    margin : 15px 0;
+    box-sizing: border-box;
+}
+
+.left-div .input-field:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(61, 198, 243);
+}
+
+#tasks-header{
+    color : var(--primary-color);
+    font-family: 'Oswald', sans-serif;
+    font-stretch: semi-condensed;
+    margin-top:0;
+    text-align: center;
+}
+.Task-item .Task{
+    font-size: 28px;
+    font-family: 'Oswald', sans-serif;
+    font-stretch: semi-condensed;
+    font-weight:500;
+    margin-top : 10px;
+    margin-bottom : 20px;
+}
+.Task-item .desc{
+    margin-bottom : 15px;
+}
+.Task-item{
+    border : 2px solid rgba(241, 241, 241, 0.733);
+    box-shadow: rgba(138, 137, 137, 0.733) 1.95px 1.95px 2.6px;
+    margin: 15px 0px;
+    background-color: white;
+}
+.Task-item hr {
+    border: 1px solid rgb(238, 238, 238);
+    background-color:rgb(238, 238, 238);
+    margin :0;
+}
+.data, .buttons{
+    padding : 15px;
+}
+
+
+.button{
+    font-family:'Oswald', sans-serif;
+    padding : 10px 15px;
+    background-color: rgba(10, 158, 54, 0.945);
+    color : white;
+    border : none;
+    font-size: 15px;
+    box-shadow: rgba(50, 50, 93, 0.336) 0px 2px 5px -1px, rgba(0, 0, 0, 0.479) 0px 1px 3px -1px;
+}
+
+.add:hover{
+    background-color: rgb(0, 138, 41);
+}
+
+.edit{
+    background-color: #F97316;
+}
+.edit:hover{
+    background-color: #EA580C;
+}
+.delete{
+    background-color: #EF4444;
+}
+.delete:hover{
+    background-color: #DC2626;
+}
+.update{
+    background-color: rgba(0, 21, 211, 0.808);
+}
+.update:hover{
+    background-color: rgba(0, 21, 211, 0.932);
+}
+.cancel{
+    background-color : rgba(184, 0, 0, 0.89);
+}
+.cancel:hover{
+    background-color:rgb(184, 0, 0);
+}
+
+
+/* Styles for footer */
+footer{
+    background-color:var(--primary-color);
+    padding : 1.5rem;
+    text-align : center;
+    color : white;
+    border-top-right-radius : 1rem;
+    padding-top : 3rem;
+}
+.footer .footer-header{
+    font-weight : bold;
+    font-size:large;
+}
+.footer .link{
+    color : white;
+}
+.footer ul{
+    padding-inline-start : 0px;
+    padding-top : 10px;
+}
+.list-item-inline{
+    display : inline;
+    padding : 0rem 0.5rem;
+}
+.list{
+    list-style: none;
+}
+.link-footer{
+    text-decoration : none;
+    padding : 0.5rem 1rem;
+    margin-top : 1rem;
+    margin-bottom : 1rem;
+    color : white;
+}
+/* --------------------------------------- */
+
+
+
+.show-delete{
+    text-align: center;
+}
+.show-delete .button{
+    margin : 0 20px;
+    padding : 10px 20px;
+    width : 45%;
+    margin : 5px;
+}
+
+.show-delete .showAll{
+    background-color: #06a170e0;
+    color : white;
+    font-weight : bolder;
+}
+.show-delete .showAll:hover{
+    background-color: #059769;
+}
+.show-delete .deleteAll{
+    background-color: #dc2626d7;
+    color : rgb(255, 255, 255);
+    font-weight : bolder;
+}
+.show-delete .deleteAll:hover{
+    background-color: #dc2626fb;
+}
+
+.no-task-info{
+    color : rgb(0, 162, 255);
+    padding : 20px;
+    text-align: center;
+    margin : 20px;
+    border : 3px dotted rgba(0, 174, 255, 0.822);
+    font-size : 20px;
+    margin-top : 40px;
+}
+
+:focus{
+    outline : none;
+}
+
+
+.header{
+    /* background-color: rgb(201, 201, 201); */
+    background-color:white ;
+    background-attachment: fixed;
+    height : 50vh;
+    margin-bottom : 50px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.header .text{
+    display : inline-block;
+    width : 59%;
+    box-sizing : border-box;
+    color : var(--primary-dark);
+    height: 20vh;
+    text-align: center;
+    vertical-align: middle;
+    margin: 15vh 0;
+    padding : 0 30px;
+   
+}
+.header .image{
+    width : 40%;
+    display : inline-block;
+    text-align: center;
+}
+.header .image img{
+    width : auto;
+    height : 40vh;
+    vertical-align: middle;
+    max-width: 100%;
+}
+.header .button{
+    margin: 2rem;
+    text-decoration: none;
+    padding : 15px 40px;
+    border-radius: 3rem;
+    background-color: var(--primary-dark);
+    font-size : 15px;
+}
+.header .btn-view {
+    border :2px solid var(--primary-dark);
+    background-color: white;
+    color :var(--primary-dark);
+    /* font-weight : bolder; */
+}
+
+.header .btn-view:hover{
+    box-shadow: rgba(50, 50, 93, 0.337) 0px 2px 5px -1px, rgba(0, 0, 0, 0.726) 0px 2px 4px -1px;
+}
+    
+.header .btn-new:hover{
+    box-shadow: rgba(50, 50, 93, 0.337) 0px 2px 5px -1px, rgba(0, 0, 0, 0.301) 0px 3px 5px -1px;
+}
+
+.header .heading{
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    margin-bottom: 40px;
+    font-style : italic;
+}
+
+
+/* For small devices */
+@media (max-width: 800px){
+    .left-div{
+        width : 95vw;
+        margin : auto;
+        display : block;
+        max-width : 700px;
+    }
+    .right-div{
+        width : 99vw;
+        margin : auto;
+        display : block;
+        margin-top : 30px;
+        max-width : 600px;
+    }
+    .show-delete .showAll{
+        width : 95%;
+        box-sizing: border-box;
+    }
+    .show-delete .deleteAll{
+        width : 95%;
+        box-sizing: border-box;
+    }
+
+    .header .text{
+        display : inline-block;
+        width : 100%;
+        box-sizing : border-box;
+        color : var(--primary-dark);
+        height: unset;
+        text-align: center;
+        vertical-align: middle;
+        margin: 12vh 0;
+        padding : 0 50px;
+        margin-bottom : 5vh;
+    }
+    .header .image{
+        width : 100%;
+        display : inline-block;
+        text-align: center;
+    }
+    .header .image img{
+        width : auto;
+        height : 30vh;
+        vertical-align: middle;
+        max-width: 80%;
+        margin-bottom:10px;
+    }
+    .header{
+        height :unset;
+    }
+    .header .button{
+        padding : 15px 35px;
+        margin: unset;
+    }
+}
+@media (max-width: 850px){
+    .header .button{
+        margin: 1rem;
+    }
+}
+
+@media (max-width : 450px){
+    .header .button{
+        display: block;
+    }
+    .header .text{
+        margin: 10vh 0;
+        margin-bottom : 3vh;
+    }
+}
+
+.Task-item{
+    position : relative;
+}
+
+#done{
+background-color: white;
+border:none;
+font-size : 30px;
+position : absolute;
+right : 10px;
+color : gray;
+font-weight : bolder;
+cursor: pointer;
+}
+#done:hover{
+    color :#00b200ce !important;
+}
+
+#status{
+    color :#00a529;
+    font-weight : bolder;
+}

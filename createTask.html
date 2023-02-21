@@ -1,8 +1,35 @@
-<html>
-    <head>
-        <title>Create Task</title>
-    </head>
-    <body>
-        <h1>You have successfully entered your dashboard, now create task</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+    <script src="https://kit.fontawesome.com/d733855d1a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./createTask.css">
+    <script src="./createTask.js"></script>
+    
+</head>
+<body>
+
+
+
+    <script>
+        document.getElementById("task").addEventListener("focusin",function(){
+            document.getElementById("tasklabel").style.color = " rgb(61, 198, 243)";
+        });
+        document.getElementById("task").addEventListener("focusout",function(){
+            document.getElementById("tasklabel").style.color = " #aaaaaa";
+        });
+        document.getElementById("desc").addEventListener("focusin", function(){
+            document.getElementById("desclabel").style.color = " rgb(61, 198, 243)";
+        });
+        document.getElementById("desc").addEventListener("focusout", function(){
+            document.getElementById("desclabel").style.color = " #aaaaaa";
+        });
+    </script>
+    <script src="./createTask.js"></script>
+</body>
 </html>
