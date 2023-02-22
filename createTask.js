@@ -93,3 +93,83 @@ function editData(c) {
 }
 
 // Update Data and clear cancel and update task buttons
+
+function updateData(c) {
+  var updateTask = document.getElementById("task").value;
+  var updateDesc = document.getElementById("desc").value;
+
+  firebase
+    .database()
+    .ref("TaskList/" + c)
+    .update({
+      task: updateTask,
+      desc: updateDesc,
+    });
+
+  document.getElementById("task").value = "";
+  document.getElementById("desc").value = "";
+  document.getElementById("updateTask").remove();
+  document.getElementById("cancelTask").remove();
+
+  document.getElementById("form-btns").innerHTML = `
+  <button type="submit" class="button add" id = "addTask" >󠀫󠀫<i class="fas fa-plus"></i> ADD TASK</button>
+  `;
+
+  // Updating the task in the side bar
+  document
+    .getElementById(c)
+    .querySelector(".data")
+    .querySelector(".Task").innerHTML = updatedTask;
+  document
+    .getElementById(c)
+    .querySelector(".data")
+    .querySelector(".desc").innerHTML = updatedDesc;
+}
+
+function cancelUpdation() {
+  document.getElementById("task").value = "";
+  document.getElementById("desc").value = "";
+  document.getElementById("updateTask").remove();
+  document.getElementById("cancelTask").remove();
+
+  document.getElementById("form-btns").innerHTML = `
+  <button type="submit" class="button add" id = "addTask" >󠀫󠀫<i class="fas fa-plus"></i> ADD TASK</button>
+  `;
+}
+
+// Delete everything in our database
+function deleteAll() {
+  var option = false;
+  if (totalItems === 0 && document.getElementById("info") === null) {
+    document.getElementById("tasks-header").insertAdjacentHTML(
+      "afterend",
+      `<div class="no-task-info" id = "info">
+            <i class="fas fa-info-circle"></i>
+            No pending tasks
+        </div>`
+    );
+  }
+
+  if (totalItems !== 0) {
+    option = confirm(
+      "The tasks will be permanently deleted. Do you want to continue?"
+    );
+    if (option === true) {
+      firebase.database().ref("TaskList").remove();
+      document.querySelectorAll(".Task-item").forEach((element) => {
+        element.remove();
+      });
+      firebase.database().ref("TotalTasks").update({
+        totalItems: 0,
+        maxCode: 0,
+      });
+      document.getElementById("tasks-header").insertAdjacentHTML(
+        "afterend",
+        `<div class="no-task-info" id = "info">
+                <i class="fas fa-info-circle"></i>
+                All items deleted
+            </div>`
+      );
+    }
+  }
+}
