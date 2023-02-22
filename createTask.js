@@ -1,11 +1,11 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDepZoaHvu87ZkUv3nKLiqcMOIa1igo068",
-  authDomain: "plp-bootcamp.firebaseapp.com",
-  projectId: "plp-bootcamp",
-  storageBucket: "plp-bootcamp.appspot.com",
-  messagingSenderId: "572952880606",
-  appId: "1:572952880606:web:85064f68b8373aca40294f",
-  measurementId: "G-RW5BYY2CDG",
+  apiKey: "AIzaSyBEC8nZF1gLS8mEJiNfpxyiLfC79JqXkA0",
+  authDomain: "task-man-c7972.firebaseapp.com",
+  projectId: "task-man-c7972",
+  storageBucket: "task-man-c7972.appspot.com",
+  messagingSenderId: "1047263220371",
+  appId: "1:1047263220371:web:1b0b88233ba16509e4b366",
+  measurementId: "G-9VR0K26NHG",
 };
 
 // Initialize Firebase
@@ -91,3 +91,5 @@ function editData(c) {
     <button class="button cancel" id = "cancelTask" onclick = "cancelUpdation()"><i class="fas fa-ban"></i> CANCEL</button>
     `;
 }
+
+// Update Data and clear cancel and update task buttons
