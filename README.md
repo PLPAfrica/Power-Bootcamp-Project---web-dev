@@ -13,4 +13,4 @@ To clone this project please do
 
 ### Link to the website
 
-[https://melbite.com](Click Here)
+Open Website: [https://melbite.com](ClickHere)
